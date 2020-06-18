@@ -6,40 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
-  output: number;
+  output: any;
   first: number;
   second: number;
   operator = '+';
-
-  onFirstChange(value) {
-    this.first = (value);
-  }
-
-  onSecondChange(value) {
-    this.second = (value);
-  }
-
-  onSelectChange(value) {
-    this.operator = value;
-  }
+  message = '';
 
   ngOnInit(): void {
   }
 
   calculate() {
-    switch (this.operator) {
-      case '+':
-        this.output = this.first + this.second;
-        break;
-      case '-':
-        this.output = this.first - this.second;
-        break;
-      case '*':
-        this.output = this.first * this.second;
-        break;
-      case '/':
-        this.output = this.first / this.second;
-        break;
+    if (this.second && this.first) {
+      this.message = ''
+      switch (this.operator) {
+        case '+':
+          this.output = this.first + this.second;
+          break;
+        case '-':
+          this.output = this.first - this.second;
+          break;
+        case '*':
+          this.output = this.first * this.second;
+          break;
+        case '/':
+          this.output = this.first / this.second;
+          break;
+      }
+    } else {
+      this.message = "hay nhap so con lai";
+      this.output = '';
     }
   }
 }
