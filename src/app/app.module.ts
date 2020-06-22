@@ -9,6 +9,8 @@ import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.com
 import { PetComponent } from './pet/pet.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 
 
@@ -18,7 +20,9 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
     FontSizeEditorComponent,
     PetComponent,
     CalculatorComponent,
-    ColorPickerComponent
+    ColorPickerComponent,
+    NameCardComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
